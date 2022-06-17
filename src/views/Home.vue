@@ -21,8 +21,13 @@
     </ArmyListAccordion>
 
     <ArmyListAccordion :title="'Warmaster Revolution'">
-      <a target="_blank" title="Warmaster Revolution Compendium" href="/pdfs/WMR1.1compendium.pdf"><span>Warmaster Revolution Compendium</span></a>
-      <a target="_blank" title="Warmaster Revolution Armies" href="/pdfs/WMR armies1.1.pdf"><span>Warmaster Revolution Armies</span></a>
+      <a target="_blank" title="Warmaster Revolution Compendium 1.2" href="/pdfs/WMR 1.2.pdf"><span>Warmaster Revolution Compendium 1.2</span></a>
+      <a target="_blank" title="Warmaster Revolution Armies 1.22" href="/pdfs/WMR armies1.22.pdf"><span>Warmaster Revolution Armies 1.22</span></a>
+    </ArmyListAccordion>
+
+    <ArmyListAccordion :title="'Warmaster Revolution Developmental'">
+      <a target="_blank" title="Warmaster Revolution Compendium updates for 2022" href="/pdfs/warmaster-revolution-updates-for-2022-final-draft.pdf"><span>Warmaster Revolution Compendium updates for 2022</span></a>
+      <a target="_blank" title="Warmaster Revolution Armies 1.23" href="/pdfs/WMR armies1.23dev.pdf"><span>Warmaster Revolution Armies 1.23</span></a>
     </ArmyListAccordion>
 
     <ArmyListAccordion :title="'Warmaster Ancients'">
