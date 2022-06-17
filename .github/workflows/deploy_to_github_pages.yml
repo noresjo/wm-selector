@@ -1,4 +1,4 @@
-name: Deploy to wm-selector.github.io
+name: Deploy to alternate-wm-selector.github.io
 on:
   push:
     branches: [ main ]
@@ -11,19 +11,19 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/checkout@v2
         with:
-          repository: wm-selector/wm-selector.github.io
+          repository: noresjo/alternate-wm-selector.github.io
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-          path: wm-selector.github.io
+          path: pages-repo
       - uses: actions/setup-node@v2
       - name: Build and Deploy
         run: |
           npm ci
           npm run build
-          rm -Rf wm-selector.github.io/*
-          cp -Rf dist/* wm-selector.github.io/
-          cd wm-selector.github.io/
-          git config user.email 'dsusco@gmail.com'
-          git config user.name 'David Susco'
+          rm -Rf pages-repo/*
+          cp -Rf dist/* pages-repo/
+          cd pages-repo/
+          git config user.email 'bot@botmail.com'
+          git config user.name 'Bot Automatica'
           git checkout README.md
           git add .
           git commit -m '${{ github.repository }} ${{ github.sha }}'
