@@ -8,12 +8,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Checkout private tools
+        uses: actions/checkout@v3
         with:
           repository: noresjo/alternate-wm-selector.github.io
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          token: ${{ secrets.DEPLOY_KEY }}
           path: pages-repo
+      
       - uses: actions/setup-node@v2
       - name: Build and Deploy
         run: |
